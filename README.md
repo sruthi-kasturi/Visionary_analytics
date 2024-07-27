@@ -1,78 +1,54 @@
-# CV_Dicom_
+# Visionary Analytics
+
+Welcome to **Visionary Analytics**! This repository is dedicated to the innovative application of deep learning techniques for object detection and semantic segmentation using the COCO-2017 dataset. Our goal is to provide a comprehensive toolkit for accurately detecting and segmenting objects in images, leveraging state-of-the-art models.
 
 ## Table of Contents
 
 - [Project Overview](#project-overview)
 - [Datasets](#datasets)
-- [Practice Reading and Processing DICOM Images](#practice-reading-and-processing-dicom-images)
 - [Object Detection Model Development](#object-detection-model-development)
 - [Semantic Segmentation Model Development](#semantic-segmentation-model-development)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributors](#contributors)
+- [Results](#results)
 
 ## Project Overview
 
-This project is divided into three main tasks:
-1. **Practice Reading and Processing DICOM Images**
-2. **Object Detection Model Development**
-3. **Semantic Segmentation Model Development**
+**Visionary Analytics** focuses on two main tasks in computer vision:
+1. **Object Detection Model Development**
+2. **Semantic Segmentation Model Development**
 
-Each task involves different aspects of computer vision and deep learning, utilizing datasets and models to achieve specific goals.
+Each task utilizes advanced deep learning models to achieve high accuracy and efficiency in identifying and segmenting objects within images.
 
 ## Datasets
 
-### DICOM Dataset
-- A set of DICOM images provided in a zipped folder (`0003b3d648eb.zip`).
-- The goal is to load, process, and visualize these medical images.
-
 ### COCO-2017 Dataset
-- A large-scale object detection, segmentation, and captioning dataset.
-- Contains images with multiple classes, annotations, and segmentation masks.
-- For object detection, we focus on the "person" class.
-- For semantic segmentation, we focus on the "person," "cat," and "car" classes.
-
-## Practice Reading and Processing DICOM Images
-
-### Objective
-- Load and process DICOM images from a provided dataset.
-- Find the middle slice from the volume.
-- Visualize the slice using lung and bone window settings in a 1x2 grid.
-- Save the two images as 16-bit depth PNG images.
+The COCO-2017 dataset is a large-scale object detection, segmentation, and captioning dataset. It contains over 200,000 labeled images with annotations for multiple classes. For this project, we focus on:
+- **Object Detection:** "Person" class
+- **Semantic Segmentation:** "Person," "Cat," and "Car" classes
 
 ## Object Detection Model Development
 
 ### Objective
-- Load only the "person" class from the COCO-2017 dataset.
-- Create train and test splits.
+- Load the "person" class from the COCO-2017 dataset.
+- Create training and test splits.
 - Train an object detection model (e.g., YOLO, Faster R-CNN).
-- Compute test performance using Intersection over Union (IOU).
+- Evaluate model performance using Intersection over Union (IoU).
 
 ## Semantic Segmentation Model Development
 
 ### Objective
 - Load the "person," "cat," and "car" classes from the COCO-2017 dataset.
-- Create train and test splits.
+- Create training and test splits.
 - Train a U-Net segmentation model.
-- Compute test performance using mean Dice score and IOU.
+- Evaluate model performance using mean Dice score and IoU.
 
-## Usage
+## Results
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/yourusername/visionary-insights.git
-   cd visionary-insights
-Follow the instructions in each respective directory for running the code and training the models.
-Dependencies
-Python 3.7+
-NumPy
-Pandas
-Matplotlib
-PyTorch
-torchvision
-pydicom
-scikit-learn
-fiftyone
-pycocotools
-Contributors
-Sruthi Kasturi
+### Object Detection
+- **IoU:** Achieved a mean IoU score of 0.63 on the test dataset for object detection.
+
+### Semantic Segmentation
+- **Dice Score:** Achieved a mean Dice score of 0.36.
+- **IoU Score:** Achieved a mean IoU score of 0.32 for semantic segmentation.
+
+For questions or collaboration, feel free to contact me at skastur6@asu.edu
+
